@@ -1,17 +1,14 @@
-array1 = []
-a = -1
-while a != 0:
-    ab = list(map(int,input().split()))
-    try:
-        a = ab[0]
-        b = ab[1]
-    except:
-        a = ab[0]
-    if a == 1:
-        array1.append(b)
-    elif a == 2:
-        if b in array1:
-            print(1)
+dict = {}
+while True:
+    array = [int(i) for i in input().split()]
+    if array[0] == 0:
+        break
+    elif array[0] == 1:
+        dict[array[1]] = 1
+    elif array[0] == 2:
+        if array[1] in dict:
+            print(dict[array[1]])
         else:
             print(0)
+    
 

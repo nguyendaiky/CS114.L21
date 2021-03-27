@@ -1,10 +1,16 @@
-n = int(input())
-array = list(map(int,input().split()))
-k, a = map(int,input().split())
-result = []
 
-for i in range(0,k):
-    number = min(array,key=lambda x: abs(a-x))
-    array.remove(number)
-    result.append(number)
-print(result)
+import sys
+
+input = sys.stdin.readline
+out = list()
+
+while True:
+    iterInput = map(int,input().split())
+    control = next(iterInput)
+    if control == 0:
+        out.insert(0, next(iterInput))
+    elif control == 1:
+        out.append(next(iterInput))
+    elif control == 3:
+        break
+sys.stdout.write(' '.join(map(str,out)))
